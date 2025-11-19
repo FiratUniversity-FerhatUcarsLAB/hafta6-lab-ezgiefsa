@@ -1,7 +1,7 @@
 /**
 * Ad Soyad: Ezgi Efsa Güleç
 * Numara:250541023
-* Proje: sinema bileti fiyatlandırma 
+* Proje: sinema bileti 
 * Tarih: 19.11.2025
 */
 
@@ -115,3 +115,4 @@ public class sinemaBiletiFiyatlandirma {
 		
 		
 		
+
