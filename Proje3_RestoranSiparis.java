@@ -7,7 +7,7 @@
 
 	import java.util.Scanner;
 
-	public class aaaa {
+	public class restoranSiparisi{
 
 	    // ana yemek fiyatı
 	    public static double getMainDishPrice(int secim) {
@@ -140,6 +140,7 @@
 	        System.out.println("Bahşiş Önerisi: " + String.format("%.2f", bahsis) + " TL");
 	    }
 	}
+
 
 
 
