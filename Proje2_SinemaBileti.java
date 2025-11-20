@@ -2,9 +2,8 @@
 * Ad Soyad: Ezgi Efsa Güleç
 * Numara:250541023
 * Proje: sinema bileti 
-* Tarih: 19.11.2025
+* Tarih: 20.11.2025
 */
-
 
 import java.util.Scanner;
 public class sinemaBiletiFiyatlandirma {
@@ -45,6 +44,7 @@ public class sinemaBiletiFiyatlandirma {
 			// öğretmen 
 		} else if (meslek == 2 && gun == 3) {
 			indirimOrani = 0.35;
+		
 
 		}
 		return indirimOrani;
@@ -60,11 +60,12 @@ public class sinemaBiletiFiyatlandirma {
     	 
     	 }
     	 }
+     
      // final fiyat hesabı
       public static double calculateFinalPrice(int gun ,int saat ,int yas ,int meslek,int filmTuru) {
       double base = calculateBasePrice(gun,saat);
       double indirimOrani = calculateDiscount (yas,meslek,gun);
-      double indirim =base * indirimOrani;
+      double indirim = base * indirimOrani;
       
       double indirimliFiyat = base -indirim;
       double extra = getFormatExtra(filmTuru);
@@ -91,18 +92,35 @@ public class sinemaBiletiFiyatlandirma {
 
 	        System.out.print("Gün (1=Pzt ... 7=Pazar): ");
 	        int gun = sc.nextInt();
+	        if (gun < 1 || gun >7) {
+	        	System.out.println("HATA: gün 1 ile 7 arasında olmalıdır!");
+	        	return;
+	        }
 
 	        System.out.print("Saat (8-23): ");
 	        int saat = sc.nextInt();
+	        if (saat < 8 || saat > 23) {
+	        	System.out.println("HATA: saat 8 ile 23 arasında olmalıdır!");
+	        	return;
+	        }
 
 	        System.out.print("Yaş: ");
 	        int yas = sc.nextInt();
+	        
 
 	        System.out.print("Meslek (1=Öğrenci, 2=Öğretmen, 3=Diğer): ");
 	        int meslek = sc.nextInt();
+	        if (meslek < 1 || meslek >7) {
+	        	System.out.println("HATA: meslek 1 ile 3 arasında olmalıdır!");
+	        	return;
+	        }
 
 	        System.out.print("Film Türü (1=2D, 2=3D, 3=IMAX, 4=4DX): ");
 	        int filmTuru = sc.nextInt();
+	        if (filmTuru < 1 || filmTuru > 4) {
+	        	System.out.println("HATA: film türü 1 ile 4 arasında olmalıdır!");
+	        	return;
+	        }
 
 	        System.out.println();
 	        System.out.println(generateTicketInfo(gun, saat, yas, meslek, filmTuru));
@@ -115,4 +133,12 @@ public class sinemaBiletiFiyatlandirma {
 		
 		
 		
+
+		
+		
+		
+		
+		
+		
+
 
